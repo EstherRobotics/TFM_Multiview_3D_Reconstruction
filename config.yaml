@@ -1,0 +1,19 @@
+paths:
+  base: "/home/esther/Escritorio/2022-TFM-EstherVeraMoreno/src/panoptic_reconstruction/"
+  data: "data/"
+  save: "final_evaluation_reconstruction2/"
+
+seq_names:
+  - 171204_pose5
+  - 171026_pose1
+  - 171026_pose2
+  - 171026_pose3
+  - 170404_haggling_b3
+  - 171026_pose2_2
+  - 171204_pose5_1
+  - 171026_pose1_2
+  - 170404_haggling_b1 
+  - 171026_pose1_3
+  - 171204_pose5_2
+  - 171204_pose5_3
+  - 171204_pose5_4

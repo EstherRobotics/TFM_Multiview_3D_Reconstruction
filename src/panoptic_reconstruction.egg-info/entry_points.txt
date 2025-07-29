@@ -1,0 +1,2 @@
+[console_scripts]
+panoptic_reconstruction = panoptic_reconstruction.main:main
