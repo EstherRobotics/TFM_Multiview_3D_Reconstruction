@@ -1,2 +1,2 @@
 # TFM_Multiview_3D_Reconstruction
-This repository contains the first part of my Computer Vision Master's thesis: a pipeline to annotate the CMU Panoptic Studio dataset with accurate 3D facial reconstructions using multiview images, DAD-3DNet for landmark detection, and a RANSAC-based view selection method.
+This repository presents the first part of my **Computer Vision Master's thesis project**: a pipeline to annotate the CMU Panoptic Studio dataset with accurate 3D facial reconstructions from multiview images. Using **DAD-3DNet** for landmark detection and a customed **RANSAC** method for view selection, the approach achieves low reprojection error and generates a refined 3D facial dataset aligned with the original images.
