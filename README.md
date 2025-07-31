@@ -68,24 +68,66 @@ For a complete overview of the project, check out the complete report in [TFM_Es
 
 ## 📄 Dataset 
 
+The dataset used for this code is extracted from [CMU Panoptic Studio](https://www.cs.cmu.edu/~hanbyulj/panoptic-studio/). There were selected a group of sequences that are saved inside [sequence folder](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/sequences) in data. These images were used for the developing and evaluation of the program and can be used to execute the [main](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/src/panoptic_reconstruction/__main__.py) code directly. 
+
+For executing the [from_txt](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/src/panoptic_reconstruction/from_txt.py) code, you should download the sequences corresponding to the paths inside [files](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/files) folder. 
 
 
 ## 💻 Requirements
+
+- Create a new python environment
+- Install the dependencies contained in [requirements.txt](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/requirements.txt)
+- Make sure that your system support C++ compilation for csvba execution. 
 
 
 
 ## ⚙️ Parameters
 
-The parameters are defined...
+The management of routes is define inside [config folder](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/config). Inside confing.ymal is defined: 
+- *save_cropped_imgs*: Folder name to save [facial crops](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/cropped_imgs_for_evaluation) used facial landmark detection is performed.
+- *annotations*: Folder name to save [annotations](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/annotations) inside data folder.
+- *seq_names*: Name of the sequences to process by the main, that are saved in [sequence folder](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/sequences). 
 
-
+Feel free to adjust this information and manage_paths routes as convenience. 
 
 ## 🚀 Usage
 
+After installation of the environment, you should configure the program environment using: 
+
+pip install -e . 
+
+Then, to execute the main code just co to TFM_Multiview_3D_Reconstruction path and execute: 
+
+python -m panoptic_reconstruction 
+
+
+This will start the code which will follow the next pipeline automatically: 
+
+
+....
+
+
+If you want to use files with paths definition for the selected sequences, you can use the from_txt code by typing: 
+
+python -m panoptic_reconstruction.from_txt <method>
+
+Where method can be: train, vlaid or test. In this case, will select one of the three [files](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/files) defined. 
 
 
 
 ## 📊 Results
+
+As a result, you will obtain three outcomes: 
+
+- *3D_annotations*: 3D reconstruciton annotations
+- *reprojections*: 2D reprojected landmarks in coordinates scaled to the facial crops. 
+- *nsreprojections*: 2D reprojected landmarks with the coordinates following the hdImgs original size from sequences. 
+
+Esentially, both reprojections 2D coordinates are the same but they are saved in different coordinates for covinience. 
+
+
+This information can be used for reconstruct the 3D mesh of the faces detected: 
+
 
 
 
