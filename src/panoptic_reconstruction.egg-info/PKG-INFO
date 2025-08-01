@@ -1,11 +1,10 @@
 Metadata-Version: 2.1
 Name: panoptic_reconstruction
 Version: 0.1.0
-Summary: Sistema de procesamiento y reconstrucción 3D a partir de imágenes panópticas
-Author-email: Tu Nombre <tu@email.com>
+Summary: Multiview 3D reconstruction method that uses DAD_3DNet and integrate RANSAC camera refinement for extracting 3D annotations
+Author-email: Esther Vera Moreno <esthervera99@gmail.com>
 License: MIT
-Project-URL: Homepage, https://github.com/tu-usuario/panoptic-reconstruction
-Project-URL: Bug Tracker, https://github.com/tu-usuario/panoptic-reconstruction/issues
+Project-URL: Homepage, https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -27,21 +26,5 @@ Provides-Extra: docs
 Requires-Dist: sphinx>=4.0.0; extra == "docs"
 Requires-Dist: sphinx-rtd-theme>=0.5.0; extra == "docs"
 
-# Etiquetado CMU-Panoptic con reconstrucción 3D de caras.
-
-El plan trabajo, a groso modo, será el siguiente:
-
-1. Dada una secuencia de panoptic con con todas las tomas de las múltiples cámaras de alta resolución y su calibración:
-	* Detectamos landmarks faciales compatibles con un modelo 3D. Dos posibilidades:
-		- https://github.com/PinataFarms/DAD-3DHeads
-		- https://pypi.org/project/face-alignment/
-	* Cargaríamos la posición relativa, (R, t), entre las cámaras HD de panoptic y los intrínsecos de cada una de ellas de las anotaciones.
-	* Realizar la reconstrucción 3D de cada cara:
-		- Las correspondencias entre landmarks faciales nos vendría dadas por el detector de landmarks (identificador único para cada landmark).
-		- Con las correspondencias 2D y los parámetros de todas las cámaras ya se podría hacer la reconstrucción. Sin embargo, la detección de landmarks puede fallar en alguna de las cámaras (p.ej. debido a oclusiones o una pose extrema) y eso haría que no se pudiesen utilizar todas ellas en la reconstrucción final. Habrá que desarrollar un procedimiento geométrico que permita detectar cámaras con errores
-		- Se realizará una optimización no lineal del error de reproyección únicamente sobre la reconstrucción 3D (las cámaras son conocidas). 
-2. Comprobar que 1. funciona con oclusiones y múltiples personas en la escena.
- 
-3. Llegados a este punto podríamos alguna aplicación de las nuevas etiquetas:
-	* Podríamos intentar desarrollar un detector de landmarks multi-vista (usando las detecciones en 2 cámaras) y usando como ground truth las nuevas etiquetas que habríamos sacado en 1.
-	* Otra opción podría ser desarrollar un modelo para tracking visual de landmarks usando Graph Nets (concretamente Graph Attention Networks).
+# TFM_Multiview_3D_Reconstruction
+This repository presents the first part of my **Computer Vision Master's thesis project**: a pipeline to annotate the CMU Panoptic Studio dataset with accurate 3D facial reconstructions from multiview images. Using **DAD-3DNet** for landmark detection and a customed **RANSAC** method for view selection, the approach achieves low reprojection error and generates a refined 3D facial dataset aligned with the original images.

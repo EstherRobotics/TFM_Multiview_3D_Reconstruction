@@ -1,6 +1,6 @@
 paths:
   save_cropped_imgs: "cropped_imgs_for_evaluation/"
-  temporal_annotations: "annotations/"
+  annotations: "annotations/"
 
 seq_names:
   - 171204_pose5

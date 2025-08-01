@@ -202,9 +202,9 @@ class ManagePaths:
         """
         panoptic_points_path = f"{self._paths['data_path']}/sequences/{seq_name}/"
         output_paths = {
-            'rec': f"{self._paths['data_path']}/{self._config['paths']['temporal_annotations']}/3D_annotations/",
-            'rep': f"{self._paths['data_path']}/{self._config['paths']['temporal_annotations']}/reprojections/",
-            'nsrep': f"{self._paths['data_path']}/{self._config['paths']['temporal_annotations']}/nsreprojections/"
+            'rec': f"{self._paths['data_path']}/{self._config['paths']['annotations']}/3D_annotations/",
+            'rep': f"{self._paths['data_path']}/{self._config['paths']['annotations']}/reprojections/",
+            'nsrep': f"{self._paths['data_path']}/{self._config['paths']['annotations']}/nsreprojections/"
         }
 
         for path in output_paths.values():
