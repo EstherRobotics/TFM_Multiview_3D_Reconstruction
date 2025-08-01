@@ -83,9 +83,9 @@ For executing the [from_txt](https://github.com/EstherRobotics/TFM_Multiview_3D_
 ## 🔧 Parameters
 
 The management of routes is define inside [config folder](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/config). Inside confing.ymal is defined: 
-- *save_cropped_imgs*: Folder name to save [facial crops](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/cropped_imgs_for_evaluation) used facial landmark detection is performed.
-- *annotations*: Folder name to save [annotations](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/annotations) inside data folder.
-- *seq_names*: Name of the sequences to process by the main, that are saved in [sequence folder](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/sequences). 
+- **save_cropped_imgs**: Folder name to save [facial crops](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/cropped_imgs_for_evaluation) used facial landmark detection is performed.
+- **annotations**: Folder name to save [annotations](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/annotations) inside data folder.
+- **seq_names**: Name of the sequences to process by the main, that are saved in [sequence folder](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/sequences). 
 
 Feel free to adjust this information and manage_paths routes as convenience. 
 
