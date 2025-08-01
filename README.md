@@ -2,21 +2,20 @@
 
 ## Table Of Contents
 
-* [Overview](#overview)
-* [Structure](#structure)
-* [Dataset](#dataset)
-* [Requirements](#requirements)
-* [Parameters](#parameters)
-* [Usage](#usage)
-* [Results](#results)
-* [Author](#author)
+* [Overview](#-overview)
+* [Structure](#-structure)
+* [Dataset](#-dataset)
+* [Requirements](#-requirements)
+* [Parameters](#-parameters)
+* [Usage](#-usage)
+* [Results](#-results)
+* [Authors](#authors)
 * [Acknowledgements](#acknowledgements)
 
 ## 🔍 Overview
 
-This repository presents the first part of my **Computer Vision Master's thesis project**: a pipeline to annotate the [CMU Panoptic Studio dataset](https://www.cs.cmu.edu/~hanbyulj/panoptic-studio/) with accurate 3D facial reconstructions from multiview images. Using [DAD-3DNet](https://github.com/PinataFarms/DAD-3DHeads) for 3D landmark detection, Bundle Adjustment Structure (BAS) via [CvSBA](https://github.com/willdzeng/cvsba) for 3D refinement and a customed **RANSAC** method for view selection. The approach achieves low reprojection error and generates a refined 3D facial dataset aligned with the original images.
+This repository presents the first part of my **Computer Vision Master's thesis project**: a pipeline to annotate the [CMU Panoptic Studio dataset](https://www.cs.cmu.edu/~hanbyulj/panoptic-studio/) with accurate 3D facial reconstructions from multiview images. Using [DAD-3DNet](https://github.com/PinataFarms/DAD-3DHeads) for 3D landmark detection, Bundle Adjustment Structure (BAS) via [CvSBA](https://github.com/willdzeng/cvsba) for 3D refinement and a customed **RANSAC** method for view selection. This approach achieves low reprojection error and produces a refined 3D facial dataset accurately aligned with the original images. The generated 2D and 3D facial annotations can be used to train more accurate facial landmark detection models, perform advanced 3D reconstruction or develop new datasets.
 
-The reconstructions With the execution of this code you will get refined 3D annotations that could be used
 
 For a complete overview of the project, check out the complete report in [TFM_Esther_Vera_Moreno](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/TFM_Esther_Vera_Moreno.pdf). 
 
@@ -144,13 +143,14 @@ As a result, you will obtain three outcomes saved in [annotations](https://githu
 Esentially, both reprojections 2D coordinates are the same but they are saved in different coordinates for covenience. 
 
 
-This information can be used for reconstruct the 3D mesh of the faces detected (code not included): 
+This GIF shows the use of this information for visualization, which include: the original sequence frames with 2D landmarks reprojected onto them, the cropped face images with their corresponding 2D landmarks, and the 3D facial annotations converted into meshes for reconstruction.
+
+![video_reconstruccion(1)](https://github.com/user-attachments/assets/509dbb32-1166-4247-b670-2d7be7b0f0e2)
 
 
 
-
-
-
+> [!TIP]
+> For detailed information don't forget to check out the [TFM REPORT](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/TFM_Esther_Vera_Moreno.pdf)!
 
 ## Authors
 
