@@ -3,7 +3,7 @@
 ## Table Of Contents
 
 * [Overview](#-overview)
-* [Structure](#-structure)
+* [Structure](#🗂️structure)
 * [Dataset](#-dataset)
 * [Requirements](#-requirements)
 * [Parameters](#-parameters)
