@@ -92,41 +92,61 @@ Feel free to adjust this information and manage_paths routes as convenience.
 
 ## 🚀 Usage
 
-After installation of the environment, you should configure the program environment using: 
+After setting up the environment, configure the package with:
+```bash
+pip install -e .
+```
+Then navigate to the main project directory and run the main pipeline with:
 
-pip install -e . 
+```bash
+python -m panoptic_reconstruction
+```
 
-Then, to execute the main code just co to TFM_Multiview_3D_Reconstruction path and execute: 
+---
+The pipeline processes each sequence from the **CMU Panoptic dataset** saved in **sequences**, which is the same frame number captured simultaneously by 31 calibrated cameras. The main steps are:
 
-python -m panoptic_reconstruction 
+1. **Multiview Person and Face Detection**  
+   For each camera view of a frame, people are detected and facial regions are extracted using the panoptic annotations points. A visibility check is applied to discard occluded faces and cropping is performed based on head orientation (frontal or profile). Each cropped face image and its related coordinates are saved.
+
+2. **3D Landmark Estimation**  
+   The cropped facial images are passed through **DAD-3DNet** to estimate 3D facial landmarks.
+
+3. **Camera Selection with RANSAC**  
+   A custom **RANSAC** method selects the best subset of camera views for each face based on landmark consistency after linear reconstruction and aplying Bundle Adjustment Structure, evaluating the results against the Panoptic ground-truth annotations.
+
+4. **Final Reconstruction**  
+   Only the best-performing camera views obtained by **RANSAC** are combined to produce a final 3D reconstruction, followed by **BAS** refinement.
+
+5. **Output Saving**  
+   The final 3D facial reconstruction and its 2D projections on each image are saved before moving to the next sequence.
+
+---
 
 
-This will start the code which will follow the next pipeline automatically: 
+If you want to run the pipeline using predefined path files for a specific subset of sequences, you can use the `from_txt` entry point by typing:
 
-
-....
-
-
-If you want to use files with paths definition for the selected sequences, you can use the from_txt code by typing: 
-
+```bash
 python -m panoptic_reconstruction.from_txt <method>
-
-Where method can be: train, vlaid or test. In this case, will select one of the three [files](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/files) defined. 
+```
+Here, `method` can be one `train`, `valid` or `test`.
+Based on the selected method, the program will automatically use one of the corresponding [files](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/files) containing the path definitions for each sequence.
 
 
 
 ## 📊 Results
 
-As a result, you will obtain three outcomes: 
+As a result, you will obtain three outcomes saved in [annotations](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/annotations): 
 
-- *3D_annotations*: 3D reconstruciton annotations
-- *reprojections*: 2D reprojected landmarks in coordinates scaled to the facial crops. 
-- *nsreprojections*: 2D reprojected landmarks with the coordinates following the hdImgs original size from sequences. 
+- **3D_annotations**: 3D refined reconstruciton annotations.
+- **reprojections**: 2D reprojected landmarks from 3D, in coordinates scaled to the facial crops. 
+- **nsreprojections**: 2D reprojected landmarks from 3D, with the coordinates following the hdImgs original size from sequences. 
 
-Esentially, both reprojections 2D coordinates are the same but they are saved in different coordinates for covinience. 
+Esentially, both reprojections 2D coordinates are the same but they are saved in different coordinates for covenience. 
 
 
-This information can be used for reconstruct the 3D mesh of the faces detected: 
+This information can be used for reconstruct the 3D mesh of the faces detected (code not included): 
+
+
 
 
 
