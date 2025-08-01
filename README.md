@@ -3,7 +3,7 @@
 ## Table Of Contents
 
 * [Overview](#-overview)
-* [Structure](#🗂️structure)
+* [Structure](#-structure)
 * [Dataset](#-dataset)
 * [Requirements](#-requirements)
 * [Parameters](#-parameters)
@@ -20,7 +20,7 @@ This repository presents the first part of my **Computer Vision Master's thesis 
 For a complete overview of the project, check out the complete report in [TFM_Esther_Vera_Moreno](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/TFM_Esther_Vera_Moreno.pdf). 
 
 
- ## 🗂️ Structure
+ ## 📁 Structure
 
 
 - **src/**
@@ -80,7 +80,7 @@ For executing the [from_txt](https://github.com/EstherRobotics/TFM_Multiview_3D_
 
 
 
-## ⚙️ Parameters
+## 🔧 Parameters
 
 The management of routes is define inside [config folder](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/config). Inside confing.ymal is defined: 
 - *save_cropped_imgs*: Folder name to save [facial crops](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/tree/main/src/panoptic_reconstruction/data/cropped_imgs_for_evaluation) used facial landmark detection is performed.
