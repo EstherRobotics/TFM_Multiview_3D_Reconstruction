@@ -154,10 +154,10 @@ This GIF shows the use of this information for visualization, which include: the
 
 ## Authors
 
-* **Esther Vera** -
-* [Personal Github](https://github.com/EstherNoumena)
-* [ICAERUS Github](https://github.com/ICAERUS-EU/UC1_Crop_Monitoring)
-* [LinkedIn](https://www.linkedin.com/in/estherverarobotics/) 
+* **Esther Vera**
+  * [Personal Github](https://github.com/EstherNoumena)
+  * [ICAERUS Github](https://github.com/ICAERUS-EU/UC1_Crop_Monitoring)
+  * [LinkedIn](https://www.linkedin.com/in/estherverarobotics/) 
 
 ## Acknowledgements
 * **José Miguel Buenaposada** - [José Miguel B.](https://github.com/jmbuena/) - Master Thesis Tutor
