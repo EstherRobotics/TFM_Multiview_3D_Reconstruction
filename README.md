@@ -155,7 +155,7 @@ This GIF shows the use of this information for visualization, which include: the
 ## Authors
 
 * **Esther Vera**
-  * [Personal Github](https://github.com/EstherNoumena)
+  * [Personal Github](https://github.com/EstherRobotics)
   * [ICAERUS Github](https://github.com/ICAERUS-EU/UC1_Crop_Monitoring)
   * [LinkedIn](https://www.linkedin.com/in/estherverarobotics/) 
 
