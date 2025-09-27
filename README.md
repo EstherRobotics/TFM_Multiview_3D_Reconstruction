@@ -1,4 +1,4 @@
-# TFM_Multiview_3D_Reconstruction
+# MASTER THESIS: Multiview 3D Reconstruction and Facial Landmarks Detection in CMU Panoptic
 
 ## Table Of Contents
 
@@ -17,7 +17,7 @@
 This repository presents the first part of my **Computer Vision Master's thesis project**: a pipeline to annotate the [CMU Panoptic Studio dataset](https://www.cs.cmu.edu/~hanbyulj/panoptic-studio/) with accurate 3D facial reconstructions from multiview images. Using [DAD-3DNet](https://github.com/PinataFarms/DAD-3DHeads) for 3D landmark detection, Bundle Adjustment Structure (BAS) via [CvSBA](https://github.com/willdzeng/cvsba) for 3D refinement and a customed **RANSAC** method for view selection. This approach achieves low reprojection error and produces a refined 3D facial dataset accurately aligned with the original images. The generated 2D and 3D facial annotations can be used to train more accurate facial landmark detection models, perform advanced 3D reconstruction or develop new datasets.
 
 
-For a complete overview of the project, check out the complete report in [TFM_Esther_Vera_Moreno](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/TFM_Esther_Vera_Moreno.pdf). 
+For a complete overview of the project, check out the complete report in [MASTER THESIS (English)](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/MASTER%20THESIS%20(English)%3A%20Multiview%203D%20Reconstruction%20and%20Facial%20Landmarks%20Detection%20in%20CMU%20Panoptic.pdf) or [MASTER THESIS (Spanish)](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/MASTER%20THESIS%20(Spanish)%3A%20Reconstrucci%C3%B3n%203D%20Multivista%20y%20Detecci%C3%B3n%20de%20Landmarks%20Faciales%20en%20CMU%20Panoptic.pdf). 
 
 
  ## 📁 Structure
@@ -61,7 +61,8 @@ For a complete overview of the project, check out the complete report in [TFM_Es
 - **pyproject.toml**: project metadata and dependency configuration.
 - **requirements.txt**: required Python libraries.
 - **README.md**: project overview and usage instructions.
-- **TFM_Esther_Vera_Moreno/**: final Master's thesis report.
+- **MASTHER THESIS (English)/**: final Master's thesis report in English.
+- **MASTHER THESIS (Spanish)/**: final Master's thesis report in Spanish.
 
 
 
@@ -150,7 +151,7 @@ This GIF shows the use of this information for visualization, which include: the
 
 
 > [!TIP]
-> For detailed information don't forget to check out the [TFM REPORT](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/TFM_Esther_Vera_Moreno.pdf)!
+> For detailed information don't forget to check out the report: [MASTER THESIS (English)](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/MASTER%20THESIS%20(English)%3A%20Multiview%203D%20Reconstruction%20and%20Facial%20Landmarks%20Detection%20in%20CMU%20Panoptic.pdf) // [MASTER THESIS (Spanish)](https://github.com/EstherRobotics/TFM_Multiview_3D_Reconstruction/blob/main/MASTER%20THESIS%20(Spanish)%3A%20Reconstrucci%C3%B3n%203D%20Multivista%20y%20Detecci%C3%B3n%20de%20Landmarks%20Faciales%20en%20CMU%20Panoptic.pdf)!
 
 ## Authors
 
