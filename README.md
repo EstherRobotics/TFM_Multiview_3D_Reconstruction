@@ -61,8 +61,8 @@ For a complete overview of the project, check out the complete report in [MASTER
 - **pyproject.toml**: project metadata and dependency configuration.
 - **requirements.txt**: required Python libraries.
 - **README.md**: project overview and usage instructions.
-- **MASTHER THESIS (English)/**: final Master's thesis report in English.
-- **MASTHER THESIS (Spanish)/**: final Master's thesis report in Spanish.
+- **MASTHER THESIS (English)**: final Master's thesis report in English.
+- **MASTHER THESIS (Spanish)**: final Master's thesis report in Spanish.
 
 
 
